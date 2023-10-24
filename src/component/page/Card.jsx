@@ -3,10 +3,25 @@ import "../css/card.css";
 
 const Card = () => {
   const { state, dispatch } = GlobalHooks();
+   
+  const { totalPrice} = state.cart.reduce((acc, curr)=>{
+    // acc.totalItems += curr.quantity
+    acc.totalPrice += curr.quantity * curr.price
+    return acc;
+  },{
+    // totalItems:0,
+    totalPrice:0
+  })
+
+
+
+
   return (
     <div className="card">
       <div className="container">
-        <tr className="table_row">
+          <div className="col_gird">
+              <div className="left">
+              <tr className="table_row">
             <td>Product</td>
             <td>Description</td>
             <td>Price</td>
@@ -20,7 +35,7 @@ const Card = () => {
                 <tr className="table_row" key={index}>
                     <td><img src={product.image} alt="" /></td>
                     <td>{product.title}</td>
-                    <td> ${product.quantity * product.price}</td>
+                    <td> $ {Math.floor(product.quantity * product.price)} </td>
                     <td>{product.quantity}</td>
                     
                     <td className="quantity_col">
@@ -33,9 +48,14 @@ const Card = () => {
               )
             })}
           </div>
+              </div>
+              <div className="right">
+                  <p>Total : $ <span>{Math.floor(totalPrice)}</span></p>
+              </div>
+          </div>
       </div>
     </div>
   );
-};
+};git
 
 export default Card;

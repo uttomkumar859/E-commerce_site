@@ -27,7 +27,7 @@ const Product = () => {
               <div className="product_item" key={index}>
                 <img src={image} alt="" />
                 <p className="title">{title}</p>
-                <p>Price : ${price}</p>
+                <p>Price : ${Math.floor(price)}</p>
                 <button
                   onClick={() =>
                     dispatch({ type: "AddCart", payload: product })
