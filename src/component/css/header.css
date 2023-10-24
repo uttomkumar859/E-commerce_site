@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #333;
+}
+.header .col-flex {
+  display: flex;
+}
+.header .logo {
+  width: 25%;
+  line-height: 70px;
+  cursor: pointer;
+}
+.header .logo p {
+  font-size: 24px;
+  color: #fff;
+}
+.header .navbar {
+  width: 75%;
+}
+.header .navbar ul {
+  list-style: none;
+  text-align: right;
+}
+.header .navbar ul li {
+  display: inline-block;
+}
+.header .navbar ul li a {
+  line-height: 70px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 20px;
+}

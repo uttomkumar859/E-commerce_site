@@ -1,0 +1,34 @@
+.card {
+    background-color: #fff;
+    padding: 20px 0;
+}
+.table_row{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+.table_row td{
+    margin: 10px 0;
+}
+.table_row td img{
+    width: 50px;
+    height: 50px;
+}
+.table_row .quantity_col {
+    display: flex;
+    align-items: center;
+}
+.table_row .quantity_col button{
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.table_row .quantity_col p{
+    font-size: 16px;
+    margin: 0 15px;
+}
+.table_row .remove_product button{
+    padding: 5px 15px;
+}

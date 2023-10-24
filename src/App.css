@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{
+    background-color: #f0f2f7;
+}
+.container{
+    max-width: 1124px;
+    margin: auto;
+    padding: 0 20px;
+}
