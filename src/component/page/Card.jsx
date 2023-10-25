@@ -43,7 +43,7 @@ const Card = () => {
                         <p>{product.quantity}</p>
                         <button onClick={() => dispatch({type : 'Decrease' ,payload: product})}> - </button>
                     </td>
-                    <td className="remove_product" onClick={() => dispatch({type: 'Removecart' , payload: product })}><button>X</button></td>
+                    <td className="remove_product"><button onClick={() => dispatch({type: 'Removecart' , payload: product })}>X</button></td>
                 </tr>
               )
             })}
@@ -56,6 +56,6 @@ const Card = () => {
       </div>
     </div>
   );
-};git
+};
 
 export default Card;
